@@ -1,0 +1,44 @@
+{
+    "KPlugin": {
+        "Icon": "gwenview",
+        "MimeTypes": [
+            "application/octet-stream",
+            "inode/directory"
+        ],
+        "Name": "Start a Slideshow",
+        "Name[ar]": "ابدأ عرض الشرائح",
+        "Name[az]": "Slayd şounu başlatmaq",
+        "Name[ca@valencia]": "Inicia un passe de diapositives",
+        "Name[ca]": "Inicia un passi de diapositives",
+        "Name[cs]": "Spustit promítání",
+        "Name[de]": "Diaschau starten",
+        "Name[el]": "Έναρξη παρουσίασης",
+        "Name[en_GB]": "Start a Slideshow",
+        "Name[es]": "Comenzar una presentación",
+        "Name[eu]": "Hasi diapositiba-emanaldi bat",
+        "Name[fi]": "Käynnistä diaesitys",
+        "Name[fr]": "Démarrer un diaporama",
+        "Name[ia]": "Starta un presentation (slideshow)",
+        "Name[it]": "Avvia una presentazione",
+        "Name[ko]": "슬라이드 쇼 시작",
+        "Name[nl]": "Een diavoorstelling starten",
+        "Name[nn]": "Start ei lysbiletframvising",
+        "Name[pa]": "ਸਲਾਇਡ-ਸ਼ੋਅ ਸ਼ੁਰੂ ਕਰੋ",
+        "Name[pl]": "Rozpocznij pokaz slajdów",
+        "Name[pt]": "Iniciar uma Apresentação",
+        "Name[pt_BR]": "Iniciar uma apresentação de slides",
+        "Name[ro]": "Pornește o prezentare",
+        "Name[ru]": "Запустить слайд-шоу",
+        "Name[sk]": "Spustiť prezentáciu",
+        "Name[sl]": "Začni predstavitev",
+        "Name[sv]": "Starta ett bildspel",
+        "Name[uk]": "Розпочати показ слайдів",
+        "Name[x-test]": "xxStart a Slideshowxx",
+        "Name[zh_CN]": "开始幻灯片放映",
+        "ServiceTypes": [
+            "KFileItemAction/Plugin"
+        ]
+    },
+    "X-KDE-Require": "Read",
+    "X-KDE-Show-In-Submenu": "true"
+}

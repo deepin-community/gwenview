@@ -1,0 +1,667 @@
+gwenview (4:21.08.2-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.08.2).
+  * Bump Standards-Version to 4.6.0, no change required.
+
+ -- Norbert Preining <norbert@preining.info>  Fri, 08 Oct 2021 12:53:01 +0900
+
+gwenview (4:21.08.0-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.08.0).
+
+ -- Norbert Preining <norbert@preining.info>  Mon, 16 Aug 2021 15:45:24 +0900
+
+gwenview (4:21.04.1-1) experimental; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.04.1).
+
+ -- Norbert Preining <norbert@preining.info>  Fri, 14 May 2021 07:58:05 +0900
+
+gwenview (4:21.04.0-1) experimental; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.04.0).
+  * Bump frameworks dependency to 5.68.
+  * Drop upstream patch.
+
+ -- Norbert Preining <norbert@preining.info>  Fri, 23 Apr 2021 09:44:25 +0900
+
+gwenview (4:20.12.3-2) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * Cherry-pick upstream fix for lost exif data (Closes: #987063)
+  * Add myself to uploaders.
+
+ -- Norbert Preining <norbert@preining.info>  Sat, 17 Apr 2021 12:49:03 +0900
+
+gwenview (4:20.12.3-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * Update upstream release signing key.
+  * New upstream release (20.12.3).
+  * Removed Maximiliano Curia from the uploaders, thanks for your work
+    on the package!
+  * Added myself to the uploaders.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Mon, 08 Mar 2021 21:52:12 +0100
+
+gwenview (4:20.12.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release (20.12.1).
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Thu, 07 Jan 2021 22:43:18 +0100
+
+gwenview (4:20.12.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release (20.12.0).
+  * Rename maintainer.
+  * Bump Standards-Version to 4.5.1 (no change required).
+  * Update/simplify information in d/copyright and d/u/metadata.
+
+ -- Norbert Preining <norbert@preining.info>  Sun, 13 Dec 2020 09:59:53 +0900
+
+gwenview (4:20.08.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release (20.08.3).
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Sun, 08 Nov 2020 23:20:20 +0100
+
+gwenview (4:20.08.2-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Aurélien COUDERC ]
+  * New upstream release (20.08.2).
+  * Refresh copyright information: project metadata is CC0.
+  * Add patch to fix incorrect-path-for-interpreter as per policy §10.4.
+  * Borrow minimal upstream signing key from k3b.
+  * Refresh upstream metadata.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Tue, 27 Oct 2020 00:00:03 +0100
+
+gwenview (4:20.08.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Pino Toscano <pino@debian.org>  Thu, 03 Sep 2020 16:41:11 +0200
+
+gwenview (4:20.08.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Bump the debhelper compatibility to 13:
+    - switch the debhelper-compat build dependency to 13
+  * Update the build dependencies according to the upstream build system:
+    - bump Qt packages to 5.11.0
+    - bump KF packages to 5.61.0
+    - add libtiff-dev
+  * Update lintian overrides.
+  * Add Rules-Requires-Root: no.
+
+ -- Pino Toscano <pino@debian.org>  Thu, 13 Aug 2020 23:12:32 +0200
+
+gwenview (4:20.04.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update the build dependencies according to the upstream build system:
+    - remove qtscript5-dev, no more needed
+    - enable baloo-kf5-dev for any architecture, not only on Linux
+  * Bump Standards-Version to 4.5.0, no changes required.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 25 Apr 2020 14:11:26 +0200
+
+gwenview (4:19.12.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update watch file to the new release-service location.
+  * Switch from the debhelper build dependency to debhelper-compat
+    - remove debian/compat
+  * Switch from dhmk to the dh sequencer:
+    - invoke the dh sequencer using the kf5 addon
+    - explicitly link in as-needed mode
+    - call the right debhelper command instead of $(overridden_command)
+
+ -- Pino Toscano <pino@debian.org>  Sun, 05 Jan 2020 15:49:14 +0100
+
+gwenview (4:19.08.1-3) unstable; urgency=medium
+
+  * Team upload.
+  * Bump Standards-Version to 4.4.1, no changes required.
+  * Pass -DBUILD_TESTING=OFF to cmake to disable the build of tests, as they
+    are not run at build time anyway.
+  * Drop the 'testsuite' autopkgtest, as it does not test the installed
+    packages.
+  * Update the build dependencies:
+    - add libkf5purpose-dev to enable the integration with Purpose
+    - explicitly add gettext
+  * Use the ${perl:Depends} substvar, as there are Perl scripts.
+
+ -- Pino Toscano <pino@debian.org>  Tue, 01 Oct 2019 19:04:17 +0200
+
+gwenview (4:19.08.1-2) unstable; urgency=medium
+
+  * New revision
+  * Allow testsuite stderr
+  * Release to unstable
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 27 Sep 2019 14:50:17 -0700
+
+gwenview (4:19.08.1-1) unstable; urgency=medium
+
+  * New upstream release (19.08.1).
+  * Bump debhelper build-dep and compat to 12.
+  * Bump Standards-Version to 4.4.0.
+  * Drop dbg migration
+  * Update build-deps and deps with the info from cmake
+  * Add a salsa-ci script
+  * Drop kde-l10n breaks/replaces, fixed versions already in stable
+  * Build with hardening bindnow
+  * Release to unstable
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 27 Sep 2019 12:00:08 -0700
+
+gwenview (4:18.04.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Add the libcfitsio-dev build dependency for the FITS image reading.
+  * Switch Vcs-* fields to salsa.debian.org.
+  * Bump the debhelper compatibility to 11:
+    - bump the debhelper build dependency to 11~
+    - bump compat to 11
+  * Use https for Format in copyright.
+  * Bump Standards-Version to 4.1.4, no changes required.
+  * Remove the unused libphononexperimental-dev build dependency.
+  * Remove the unused debian/meta/cmake-ignore stuff.
+  * Update lintian overrides.
+
+ -- Pino Toscano <pino@debian.org>  Mon, 23 Apr 2018 06:56:17 +0200
+
+gwenview (4:17.08.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable. (Closes: #878290)
+  * New upstream release.
+  * Adjust l10npkgs_firstversion_ok to the version where kde-l10n will
+    drop translations.
+  * Bump Standards-Version to 4.1.1, no changes required.
+  * Simplify watch file, and switch it to https.
+  * Remove unused libkf5kdelibs4support-dev build dependency.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 26 Nov 2017 12:33:03 +0100
+
+gwenview (4:17.08.0-1) experimental; urgency=medium
+
+  * New upstream release (17.08.0)
+  * Bump Standards-Version to 4.1.0.
+  * Update upstream metadata
+  * Update build-deps and deps with the info from cmake
+  * Release to experimental
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 12 Sep 2017 22:41:14 +0200
+
+gwenview (4:17.08.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Thu, 17 Aug 2017 09:31:57 +0000
+
+gwenview (4:17.04.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 12 Jul 2017 10:18:23 +0000
+
+gwenview (4:17.04.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 07 Jun 2017 12:20:22 +0000
+
+gwenview (4:17.04.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Thu, 11 May 2017 18:10:43 +0000
+
+gwenview (4:17.04.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 19 Apr 2017 13:02:48 +0000
+
+gwenview (4:16.12.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 08 Mar 2017 13:46:39 +0000
+
+gwenview (4:16.12.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 08 Feb 2017 16:56:20 +0000
+
+gwenview (4:16.12.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 11 Jan 2017 13:14:47 +0000
+
+gwenview (4:16.12.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 14 Dec 2016 16:24:29 +0000
+
+gwenview (4:16.08.3-3) unstable; urgency=medium
+
+  * Team upload.
+  * Fix wrong package name: kdeinit is provided by kinit (Closes: #860992).
+    Thanks Michael Musenbrock for the bug report.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sun, 23 Apr 2017 10:24:25 -0300
+
+gwenview (4:16.08.3-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add kdeinit as a dependency (Closes: #860423 ).
+    Thanks Christoph Egger for the bug and the triagging!
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 22 Apr 2017 22:21:47 -0300
+
+gwenview (4:16.08.3-1) unstable; urgency=medium
+
+  * New upstream release (16.08.3)
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 23 Nov 2016 20:54:18 +0100
+
+gwenview (4:16.08.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Mon, 21 Nov 2016 13:53:01 +0000
+
+gwenview (4:16.08.2-1) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Update build-deps and deps with the info from cmake
+
+  [ Maximiliano Curia ]
+  * New upstream release (16.08.2)
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 19 Oct 2016 12:35:38 +0200
+
+gwenview (4:16.08.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Fri, 14 Oct 2016 13:38:46 +0000
+
+gwenview (4:16.08.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Fri, 16 Sep 2016 13:05:33 +0000
+
+gwenview (4:16.08.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Add the libkf5kdcraw-dev and libkf5kipi-dev, to enable RAW metadata and
+    KIPI plugins. (Closes: #827183)
+  * Restrict baloo-kf5-dev on Linux, so gwenview can be built on Hurd too.
+  * Replace the libphonon4qt5experimental4 build dependency with
+    libphononexperimental-dev, so we do not depend on the SONAME of
+    libphononexperimental.
+  * Stop forcing the local installation to debian/tmp, letting the package
+    directory as install place.
+    - remove gwenview.install, no more used now
+  * Remove unused debian/meta/ stuff.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 27 Aug 2016 08:59:51 +0200
+
+gwenview (4:16.08.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 17 Aug 2016 11:47:38 +0000
+
+gwenview (4:16.04.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 12 Jul 2016 11:39:23 +0000
+
+gwenview (4:16.04.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 22 Jun 2016 21:06:30 +0200
+
+gwenview (4:16.04.1-1) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Bump Standards-Version to 3.9.8
+
+  [ Maximiliano Curia ]
+  * New upstream release (15.12.2).
+  * Hacky use of xephyr
+  * kdeinit should be in the same dbus connection
+  * script exec permission
+  * Tests also need org.kde.kuiserver.service
+  * Replace the "Historical name" ddeb-migration by its "Modern, clearer"
+    replacement dbgsym-migration.
+  * Add upstream metadata (DEP-12)
+  * debian/control: Update Vcs-Browser and Vcs-Git fields
+  * Acknowledge NMU 4:15.08.3-1.1.
+    Thanks to Tobias Frost for the nmu
+  * Update testsuite script
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 28 May 2016 01:30:29 +0200
+
+gwenview (4:15.12.1-1) experimental; urgency=medium
+
+  * New upstream release (15.12.0).
+  * New upstream release (15.12.1).
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 01 Feb 2016 10:24:22 +0100
+
+gwenview (4:15.08.3-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Mark B-D on baloo-kf5-dev as not available on kfreebsd-any.
+
+ -- Tobias Frost <tobi@debian.org>  Tue, 26 Apr 2016 17:52:06 +0200
+
+gwenview (4:15.08.3-1) unstable; urgency=medium
+
+  * New upstream release (15.08.3).
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 02 Dec 2015 12:39:15 +0100
+
+gwenview (4:15.08.2-1) unstable; urgency=medium
+
+  [ Sune Vuorela ]
+  * Add a Recommends on qt5-image-formats-plugins to get the ability to view
+    tiff files back.
+  * Remove Eshat from Uploaders per his request. Thanks for the work.
+
+  [ Maximiliano Curia ]
+  * New upstream release (15.08.2).
+  * Update install files.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 16 Oct 2015 08:07:05 +0200
+
+gwenview (4:15.08.1-1) unstable; urgency=medium
+
+  * New upstream release (15.08.1).
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 19 Sep 2015 02:45:08 +0200
+
+gwenview (4:15.08.0-3) unstable; urgency=medium
+
+  * Merge with kubuntu changes.
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 09 Sep 2015 10:42:29 +0200
+
+gwenview (4:15.08.0-2) experimental; urgency=medium
+
+  * Force building against the experimental version of baloo.
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 05 Sep 2015 19:36:58 +0200
+
+gwenview (4:15.08.0-1) unstable; urgency=medium
+
+  * New upstream release (15.04.0).
+  * New upstream release (15.04.2).
+  * New upstream release (15.04.3).
+  * New upstream release (15.08.0).
+  * Update install files.
+  * Add plasma-workspace runtime dependency, not really usable without
+    it, (can this be reduced somehow?).
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 27 Aug 2015 17:28:27 +0200
+
+gwenview (4:15.08.0-0ubuntu2) wily; urgency=medium
+
+  * Recommend kio-extras as gwenview uses for example the zip protocol to
+    load zips directly. Additionally this is used in tests.
+  * Make autopkgetests install recommends as we need various runtime bits to
+    make the tests pass correctly
+
+ -- Harald Sitter <sitter@kde.org>  Tue, 01 Sep 2015 14:12:42 +0200
+
+gwenview (4:15.08.0-0ubuntu1) wily; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 27 Aug 2015 17:37:03 +0100
+
+gwenview (4:15.07.90-0ubuntu1) wily; urgency=medium
+
+  * New upstream release
+  * new upstream beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 18 Aug 2015 09:29:30 +0100
+
+gwenview (4:15.04.2-0ubuntu1) wily; urgency=medium
+
+  [ Scarlett Clark ]
+  * New upstream release
+  * New upstream release
+  * Vivid backport
+
+  [ Jonathan Riddell ]
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 09 Jun 2015 18:27:55 +0200
+
+gwenview (4:14.12.3-1) experimental; urgency=medium
+
+  * New upstream release (14.12.3).
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 29 Mar 2015 15:13:24 +0200
+
+gwenview (4:14.12.3-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 13 Mar 2015 14:36:55 -0700
+
+gwenview (4:14.12.2-1) experimental; urgency=medium
+
+  * New upstream release (14.12.2).
+  * Update install files.
+  * Update build dependencies to build against experimental and to
+    follow cmake.
+  * Update copyright information.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 23 Feb 2015 22:37:04 +0100
+
+gwenview (4:14.12.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 10 Feb 2015 09:41:00 -0800
+
+gwenview (4:14.12.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+  * Remove kdelibs5-dev depend version as there was not a new release.
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Thu, 11 Dec 2014 15:22:21 -0800
+
+gwenview (4:14.11.97-0ubuntu1) vivid; urgency=medium
+
+  [ Harald Sitter ]
+  * KDE Frameworks 5 Port
+    + Semantic backend (baloo) is not to be enabled for first release
+
+  [ Philip Muškovac ]
+  * New upstream release candidate.
+  * Update Vcs urls for the new repository location.
+  * Fix watch urls for new release location.
+  * Bump Standards-Version to 3.9.6, no changes needed.
+  * PPA build
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Fri, 28 Nov 2014 19:58:15 +0100
+
+gwenview (4:4.14.2-1) unstable; urgency=medium
+
+  * New upstream release (4.14.2).
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 20 Oct 2014 17:13:16 +0200
+
+gwenview (4:4.14.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 24 Aug 2014 02:02:25 +0200
+
+gwenview (4:4.13.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 31 Jul 2014 14:46:43 +0200
+
+gwenview (4:4.13.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update build dependencies.
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 27 May 2014 12:26:01 +0200
+
+gwenview (4:4.12.3-2) unstable; urgency=medium
+
+  * Release to unstable
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 28 Apr 2014 12:25:36 +0200
+
+gwenview (4:4.12.3-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 04 Mar 2014 00:06:46 +0100
+
+gwenview (4:4.12.2-1) experimental; urgency=low
+
+  [ Pino Toscano ]
+  * Add the pkg-config build dependency.
+
+  [ Maximiliano Curia ]
+  * Build the unit tests.
+  * Add autopkgtests.
+  * Bump Standards-Version to 3.9.5, no changes needed.
+  * New upstream release.
+  * Bump kde-sc-dev-latest build dependency.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 10 Feb 2014 11:32:04 +0100
+
+gwenview (4:4.11.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update build dependencies.
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 09 Nov 2013 12:39:40 +0100
+
+gwenview (4:4.11.2-1) experimental; urgency=low
+
+  * New upstream release.
+  * Update install files.
+  * Update build-dependencies.
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 09 Oct 2013 15:37:47 +0200
+
+gwenview (4:4.10.5-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 12 Jul 2013 17:52:37 +0200
+
+gwenview (4:4.10.4-1) experimental; urgency=low
+
+  * New upstream release.
+  * Bump debhelper build-dep and compat to 9.
+  * Bump Standards-Version to 3.9.4.
+  * Update vcs fields.
+  * Add myself to uploaders.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 14 Jun 2013 15:59:11 +0200
+
+gwenview (4:4.10.2-1) experimental; urgency=low
+
+  * New upstream release.
+
+  [ Josep Febrer Salord ]
+  * Bump kde-sc-dev-latest build dependency to 4:4.10.2.
+  * Add libkactivities-dev, libpng-dev and liblcms2-dev build dependencies.
+  * Disable build of unit tests.
+  * Drop upstream_Catch-exceptions-from-Exiv2-when-gathering-meta-info.patch
+    already applied upstream.
+  * Update gwenview.install file.
+  * Update copyright file.
+
+  [ Sune Vuorela ]
+  * Bump libkipi build-dep.
+  * Add me to uploaders.
+
+ -- Sune Vuorela <sune@debian.org>  Fri, 05 Apr 2013 23:27:47 +0000
+
+gwenview (4:4.8.4-2) unstable; urgency=low
+
+  * Team upload.
+  * Backport upstream commit 05511b41913904c36bfd2cccc888ac4c466784f1 to fix
+    crash when gathering meta info by catching Exiv2 exceptions; patch
+    upstream_Catch-exceptions-from-Exiv2-when-gathering-meta-info.patch.
+  * Update lintian overrides.
+
+ -- Pino Toscano <pino@debian.org>  Thu, 28 Jun 2012 19:27:14 +0200
+
+gwenview (4:4.8.4-1) unstable; urgency=low
+
+  * New upstream release.
+
+  [ Eshat Cakar ]
+  * Bump kde-sc-dev-latest build dependency to 4:4.8.4.
+  * Add libqt4-opengl-dev to build-dependecies.
+  * Update installed files.
+  * Bump Standards-Version to 3.9.3: No further changes.
+  * Add watch file.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 06 Jan 2012 12:19:57 +0100
+
+gwenview (4:4.7.4-2) unstable; urgency=low
+
+  * Team upload. Upload to unstable.
+
+ -- Pino Toscano <pino@debian.org>  Tue, 06 Mar 2012 21:45:33 +0100
+
+gwenview (4:4.7.4-1) experimental; urgency=low
+
+  * New upstream release.
+
+  [ Eshat Cakar ]
+  * Bump kde-sc-dev-latest build dependency to 4:4.7.4.
+  * Add kamera to recommends, so that importing pictures from PTP devices work.
+
+  [ José Manuel Santamaría Lema ]
+  * Bump shared-desktop-ontologies build dependency to 0.8.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 18 Dec 2011 01:35:47 +0100
+
+gwenview (4:4.7.2-1) experimental; urgency=low
+
+  [ Eshat Cakar ]
+  * Initial release. Start from the Kubuntu packaging, thanks!
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 03 Dec 2011 10:46:24 -0300

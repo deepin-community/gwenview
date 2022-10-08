@@ -1,0 +1,58 @@
+Source: gwenview
+Section: kde
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Aurélien COUDERC <coucouf@debian.org>,
+           Sune Vuorela <sune@debian.org>,
+           Norbert Preining <norbert@preining.info>,
+Build-Depends: baloo-kf5-dev (>= 5.13),
+               cmake (>= 3.16~),
+               debhelper-compat (= 13),
+               extra-cmake-modules (>= 5.68.0~),
+               gettext,
+               kinit-dev,
+               libcfitsio-dev,
+               libexiv2-dev,
+               libjpeg-dev,
+               libkf5activities-dev (>= 5.68.0~),
+               libkf5doctools-dev (>= 5.68.0~),
+               libkf5guiaddons-dev (>= 5.68.0~),
+               libkf5i18n-dev (>= 5.68.0~),
+               libkf5iconthemes-dev (>= 5.68.0~),
+               libkf5itemmodels-dev (>= 5.68.0~),
+               libkf5kdcraw-dev,
+               libkf5kio-dev (>= 5.68.0~),
+               libkf5kipi-dev,
+               libkf5notifications-dev (>= 5.68.0~),
+               libkf5parts-dev (>= 5.68.0~),
+               libkf5purpose-dev (>= 5.68.0~),
+               libkf5widgetsaddons-dev (>= 5.68.0~),
+               libkf5windowsystem-dev (>= 5.68.0~),
+               liblcms2-dev,
+               libphonon4qt5-dev (>= 4.6.60),
+               libphonon4qt5experimental-dev (>= 4.9.1),
+               libpng-dev,
+               libqt5opengl5-dev (>= 5.11.0~),
+               libqt5svg5-dev (>= 5.14.0~),
+               libqt5x11extras5-dev (>= 5.14.0~),
+               libtiff-dev,
+               pkg-config,
+               pkg-kde-tools (>> 0.15.15),
+               qtbase5-dev (>= 5.14.0~),
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Homepage: http://www.kde.org/
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/gwenview
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/gwenview.git
+
+Package: gwenview
+Section: graphics
+Architecture: any
+Depends: kinit, ${misc:Depends}, ${perl:Depends}, ${shlibs:Depends}
+Recommends: kamera, kio-extras, qt5-image-formats-plugins
+Description: image viewer
+ Gwenview is an image viewer, ideal for browsing and displaying a collection of
+ images.  It is capable of showing images in a full-screen slideshow view and
+ making simple adjustments, such as rotating or cropping images.
+ .
+ This package is part of the KDE graphics module.

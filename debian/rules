@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+export DEB_LDFLAGS_MAINT_APPEND := -Wl,--as-needed
+export DEB_BUILD_MAINT_OPTIONS=hardening=+bindnow
+
+%:
+	dh $@ --with=kf5
+
+override_dh_auto_test:
+	# Disable dh_auto_test at build time
+	:
+
+override_dh_auto_configure:
+	dh_auto_configure -Skf5 -- -DGWENVIEW_SEMANTICINFO_BACKEND_NONE=true -DBUILD_TESTING=OFF

@@ -1,0 +1,13 @@
+Description: Use /usr/bin/perl shebang in Perl script as per policy §10.4
+Author: Aurélien COUDERC <coucouf@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-10-26
+
+--- a/kconf_update/gwenview-imageview-alphabackgroundmode-update.pl
++++ b/kconf_update/gwenview-imageview-alphabackgroundmode-update.pl
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env perl
++#!/usr/bin/perl
+ 
+ use strict;
+ 
